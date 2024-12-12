@@ -7,34 +7,34 @@ import react from '../assets/react.png'
 
 const Skills = () => {
   return (
-    <div className=' border border-gray-600 bg-black text-gray-400 md:h-[150px] max-w-[1400px] mx-auto grid grid-cols-6 place-items-center md:flex md:justify-between md:items-center'>
+    <div className='border border-gray-600 bg-black text-gray-400 max-w-[1400px] mx-auto overflow-hidden'>
       <h2 className='text-gray-700 text-xl md:text-4xl font-bold m-4' id='skills'>
         Skills
-
       </h2>
-      {/* adding pic with the text for each pic using flex*/}
-      <div className='flex flex-col items-center m-4 sm:my-0 w-[40px] md:w-[100px]'>
-        <img src={html} alt="" />
-        <p className='mt-2'>HTML</p>
-      </div>
-      <div className='flex flex-col items-center m-4 sm:my-0 w-[40px] md:w-[100px]'>
-        <img src={css} alt="" />
-        <p className='mt-2'>Css</p>
-      </div>
-      <div className='flex flex-col items-center m-4 sm:my-0 w-[40px] md:w-[100px]'>
-        <img src={javascript} alt="" />
-        <p className='mt-2'>Javascript</p>
-      </div>
-      <div className='flex flex-col items-center m-4 sm:my-0 w-[40px] md:w-[100px]'>
-        <img src={tailwind} alt="" />
-        <p className='mt-2'>Tailwind</p>
-      </div>
-      <div className='flex flex-col items-center m-4 sm:my-0 w-[40px] md:w-[100px]'>
-        <img src={react} alt="" />
-        <p className='mt-2'>React</p>
+
+      <div className='flex items-center animate-slide'>
+        <div className='flex w-[100%]'>
+          {/** Skill Cards */}
+          {[{img: html, name: "HTML"}, {img: css, name: "CSS"}, {img: javascript, name: "JavaScript"}, {img: tailwind, name: "Tailwind"}, {img: react, name: "React"}].map((skill, index) => (
+            <div key={index} className='flex flex-col items-center m-4 w-[100px]'>
+              <img src={skill.img} alt={skill.name} className="w-[60px] md:w-[100px]" />
+              <p className='mt-2'>{skill.name}</p>
+            </div>
+          ))}
+        </div>
+
+        {/** Duplicate for infinite loop */}
+        <div className='flex w-[100%]'>
+          {[{img: html, name: "HTML"}, {img: css, name: "CSS"}, {img: javascript, name: "JavaScript"}, {img: tailwind, name: "Tailwind"}, {img: react, name: "React"}].map((skill, index) => (
+            <div key={index} className='flex flex-col items-center m-4 w-[100px]'>
+              <img src={skill.img} alt={skill.name} className="w-[60px] md:w-[100px]" />
+              <p className='mt-2'>{skill.name}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
 }
 
-export default Skills
+export default Skills;
