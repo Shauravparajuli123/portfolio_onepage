@@ -32,7 +32,8 @@ const Hero = () => {
           My name is Shaurav Parajuli and I am a web developer with hands on experience on web field
         </p>
         <div className='my-8'>
-          <a href="/" className='px-6 py-3 w-full rounded-xl mr-4 bg-gradient-to-br from-orange-500 to-pink-500 text-white'>
+          <a href="/Shaurav_Parajuli_CV.pdf" 
+  download="Shaurav_Parajuli_CV.pdf"   className='px-6 py-3 w-full rounded-xl mr-4 bg-gradient-to-br from-orange-500 to-pink-500 text-white'>
             Download CV
           </a>
           <a href="/" className='px-6 py-3 w-full rounded-xl border border-gray-400 hover:bg-gradient-to-br from-orange-500 to-pink-500 text-white hover:border-none'>
